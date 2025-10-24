@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Doble A Studio - Agencia de Marketing Digital | SEO, SEM y Publicidad
+    </title>
+    <meta
+      name="description"
+      content="Doble A Studio - Agencia de marketing digital especializada en SEO, SEM, Google Ads, redes sociales y desarrollo web. Desde 2025 transformando marcas en resultados."
+    />
+    <meta
+      name="keywords"
+      content="marketing digital, SEO, SEM, Google Ads, redes sociales, desarrollo web, ecommerce, publicidad online"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* Variables de colores y estilos - Optimización */
+      :root {
+        --primary-color: #1a1a1a; /* Negro fuerte */
+        --secondary-color: #4a4a4a; /* Gris oscuro para texto secundario */
+        --accent-color: #000000; /* Negro para botones */
+        --light-color: #f8f8f8; /* Gris muy sutil para fondos de sección */
+        --white-color: #ffffff; /* Blanco puro */
+        --highlight-color: #ff3366; /* Rosa Vibrante para Acénto */
+        --spacing-sm: 10px;
+        --spacing-md: 20px;
+        --spacing-lg: 60px; /* Aumentado para más aire y elegancia */
+        --border-radius: 8px; /* Más moderno */
+        --transition: all 0.3s ease;
+      }
+
+      /* Estilos generales */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        color: var(--primary-color);
+        line-height: 1.6;
+        background-color: var(--white-color);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+      }
+
+      section {
+        padding: var(--spacing-lg) 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: var(--spacing-md);
+        font-weight: 800; /* Más audaz */
+        line-height: 1.1;
+      }
+
+      h1 {
+        font-size: 3rem;
+        letter-spacing: -1px;
+        text-transform: none; /* Mejor legibilidad */
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        position: relative;
+        padding-bottom: var(--spacing-sm);
+        font-weight: 900;
+        color: var(--accent-color);
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px; /* Más largo */
+        height: 4px; /* Más grueso */
+        background-color: var(--highlight-color);
+      }
+
+      p {
+        margin-bottom: var(--spacing-md);
+        color: var(--secondary-color);
+      }
+
+      ul {
+        list-style-type: none;
+        margin-bottom: var(--spacing-md);
+      }
+
+      li {
+        margin-bottom: var(--spacing-sm);
+        padding-left: var(--spacing-md);
+        position: relative;
+        color: var(--secondary-color);
+      }
+
+      li:before {
+        content: "\f058"; /* Icono de checkmark de FontAwesome */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: var(--highlight-color); /* Usamos el color de acento */
+      }
+
+      /* Botones Globales */
+      .btn {
+        display: inline-block;
+        background-color: var(--highlight-color);
+        color: white;
+        padding: 15px 30px;
+        border: 2px solid var(--highlight-color);
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition);
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(255, 51, 102, 0.2);
+      }
+
+      .btn:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Header - NO FIJO y Logo GRANDE TEXTUAL */
+      header {
+        background-color: var(--white-color);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-img-full {
+        height: 40px;
+        margin-right: var(--spacing-sm);
+        object-fit: contain;
+      }
+
+      .logo-text h1 {
+        font-size: 1.8rem; /* Tamaño más manejable en el header */
+        margin-bottom: 0;
+        font-weight: 900;
+        letter-spacing: 0px;
+      }
+
+      .logo-text p {
+        font-size: 0.8rem;
+        color: var(--secondary-color);
+        margin-bottom: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      nav ul {
+        display: flex;
+        margin-bottom: 0;
+      }
+
+      nav li {
+        margin-bottom: 0;
+        margin-left: var(--spacing-lg);
+        padding-left: 0;
+      }
+
+      nav li:before {
+        display: none;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        transition: var(--transition);
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+      }
+
+      nav a:hover {
+        color: var(--highlight-color);
+        border-bottom: 2px solid var(--highlight-color);
+      }
+
+      /* Hero Section (BLANCO) - MEJORADO */
+      .hero {
+        background-color: var(--white-color);
+        padding: 100px 0 80px 0;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-text {
+        flex: 1;
+        max-width: 55%;
+        text-align: left;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+      }
+
+      .hero-text p {
+        font-size: 1.25rem;
+        color: var(--secondary-color);
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .hero-image {
+        flex: 1;
+        max-width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+      }
+
+      .hero-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: var(--border-radius);
+        object-fit: contain;
+        /* Efectos mejorados para la imagen */
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15))
+          drop-shadow(0 0 40px rgba(255, 51, 102, 0.1));
+        transform-style: preserve-3d;
+        animation: float 6s ease-in-out infinite,
+          glow 4s ease-in-out infinite alternate;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Efecto de flotación sutil */
+      @keyframes float {
+        0% {
+          transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+        }
+        50% {
+          transform: translateY(-15px) rotateX(2deg) rotateY(1deg);
+        }
+        100% {
+          transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+        }
+      }
+
+      /* Efecto de brillo sutil */
+      @keyframes glow {
+        0% {
+          filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15))
+            drop-shadow(0 0 40px rgba(255, 51, 102, 0.1));
+        }
+        100% {
+          filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2))
+            drop-shadow(0 0 50px rgba(255, 51, 102, 0.2));
+        }
+      }
+
+      /* Fondo decorativo para la imagen */
+      .hero-image::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        right: -10%;
+        background: radial-gradient(
+            circle at 70% 30%,
+            rgba(255, 51, 102, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 30% 70%,
+            rgba(0, 0, 0, 0.05) 0%,
+            transparent 50%
+          );
+        border-radius: 50%;
+        z-index: 1;
+        animation: rotate 20s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Efecto de partículas */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+        background: var(--highlight-color);
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: particle-float 15s infinite linear;
+      }
+
+      @keyframes particle-float {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+        }
+        100% {
+          transform: translateY(-100px) rotate(360deg);
+        }
+      }
+
+      /* Services Section (GRIS CLARO) */
+      #servicios {
+        background-color: var(--light-color); /* Fondo gris claro */
+        text-align: center;
+      }
+
+      #servicios .container h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-md); /* Espacio más compacto */
+        margin-top: var(--spacing-lg);
+      }
+
+      .service-card {
+        background-color: var(--white-color);
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
+        padding: var(--spacing-lg) var(--spacing-md);
+        transition: var(--transition);
+        text-align: left;
+        border: 1px solid #eee;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-color: var(--highlight-color);
+      }
+
+      .service-icon {
+        font-size: 3rem;
+        color: var(--highlight-color);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .service-card h3 {
+        color: var(--accent-color);
+        margin-top: 0;
+        font-weight: 700;
+      }
+
+      .ideal-for {
+        font-style: italic;
+        margin-top: var(--spacing-md);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid #ddd;
+        color: #777;
+        font-size: 0.85rem;
+      }
+
+      /* CTA Section (Negro) */
+      .cta {
+        background-color: var(--accent-color);
+        color: white;
+        text-align: center;
+        padding: 80px 0;
+      }
+
+      .cta h2 {
+        color: white;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .cta h2:after {
+        background-color: var(--highlight-color);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .cta p {
+        max-width: 700px;
+        margin: 0 auto var(--spacing-lg);
+        color: #ccc;
+        font-size: 1.1rem;
+      }
+
+      .cta .btn {
+        background-color: var(--highlight-color);
+        border-color: var(--highlight-color);
+      }
+
+      .cta .btn:hover {
+        background-color: white;
+        color: var(--accent-color);
+        border-color: white;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 50px 0;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .footer-logo-img-full {
+        height: 35px;
+        filter: brightness(0) invert(1) grayscale(100%);
+      }
+
+      .footer-logo-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        font-weight: 900;
+        color: var(--white-color);
+      }
+
+      .footer-logo-text p {
+        font-size: 0.8rem;
+        color: #aaa;
+        margin-bottom: 0;
+      }
+
+      .social-links {
+        display: flex;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.8rem;
+        margin-left: var(--spacing-md);
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--highlight-color);
+        transform: scale(1.1);
+      }
+
+      .copyright {
+        width: 100%;
+        text-align: center;
+        margin-top: var(--spacing-lg);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #ccc;
+        font-size: 0.9rem;
+      }
+
+      /* WhatsApp Float (sigue fijo) */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: white;
+        width: 65px; /* Más grande */
+        height: 65px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: var(--transition);
+        text-decoration: none;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      .whatsapp-float:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .hero-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-text {
+          max-width: 100%;
+          margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-image {
+          max-width: 100%;
+          justify-content: center;
+        }
+
+        .hero-text h1 {
+          font-size: 3rem;
+        }
+
+        .hero-image::before {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          padding: 15px 0;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          margin-top: var(--spacing-md);
+        }
+
+        nav li {
+          margin: 5px 0;
+          text-align: center;
+        }
+
+        .mobile-menu {
+          display: block;
+          position: absolute;
+          top: 25px;
+          right: 20px;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img
+              src="imagenes/4.png"
+              alt="Doble A Studio Logo"
+              class="logo-img-full"
+            />
+            <div class="logo-text">
+              <h1>DOBLE A STUDIO</h1>
+              <p>SINCE 2025</p>
+            </div>
+          </div>
+          <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="particles" id="particles-container"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Tu agencia Favorita.</h1>
+            <p>
+              Marketing de alto rendimiento. Resultados que no se consultan, se
+              imponen.
+            </p>
+            <a href="#servicios" class="btn">Empezar a Escalar</a>
+          </div>
+          <div class="hero-image">
+            <img
+              src="imagenes/4.png"
+              alt="Icono Grande de Doble A Studio"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <h2>Nuestros Servicios</h2>
+        <p>
+          Estrategias digitales completas, diseñadas para el crecimiento y la
+          conversión.
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-hashtag"></i></div>
+            <h3>Gestión de Redes Sociales</h3>
+            <p>
+              Construimos comunidades fuertes y creamos contenido viral que
+              vende.
+            </p>
+            <ul>
+              <li>Estrategia de Contenido Mensual.</li>
+              <li>Diseño Gráfico y Edición de Video.</li>
+              <li>Community Management Activo.</li>
+            </ul>
+            <p class="ideal-for">
+              Ideal para: Quienes buscan una marca sólida y constante en
+              Instagram o TikTok.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Publicidad y Meta ADS</h3>
+            <p>
+              Maximizamos tu inversión publicitaria, generando ventas y leads
+              cualificados.
+            </p>
+            <ul>
+              <li>Auditoría y Estrategia de Campañas.</li>
+              <li>Segmentación Avanzada (Lookalike, Intereses).</li>
+              <li>Optimización Continua del ROI.</li>
+            </ul>
+            <p class="ideal-for">
+              Ideal para: Negocios listos para invertir y escalar ventas en
+              Facebook/Instagram.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-search"></i></div>
+            <h3>SEO y Google Ads</h3>
+            <p>
+              Posicionamos tu sitio en la cima de los resultados de búsqueda de
+              Google.
+            </p>
+            <ul>
+              <li>Auditoría Técnica y de Contenido SEO.</li>
+              <li>Estrategia de Palabras Clave de Alta Conversión.</li>
+              <li>Campañas de Pago (SEM) en Búsqueda y Display.</li>
+            </ul>
+            <p class="ideal-for">
+              Ideal para: Empresas que necesitan tráfico orgánico constante y
+              leads cualificados.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Desarrollo Web & Ecommerce</h3>
+            <p>
+              Creamos plataformas digitales rápidas, seguras y optimizadas para
+              la conversión.
+            </p>
+            <ul>
+              <li>Diseño de Sitios Corporativos y Landing Pages.</li>
+              <li>Tiendas Online (Shopify, WooCommerce).</li>
+              <li>Optimización de Velocidad y UX.</li>
+            </ul>
+            <p class="ideal-for">
+              Ideal para: Quienes necesitan una base digital robusta o lanzar
+              una tienda en línea.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Mentorías 1:1</h3>
+            <p>
+              Sesiones personalizadas para que aprendas a dominar tus propias
+              estrategias.
+            </p>
+            <ul>
+              <li>Análisis Profundo de Tu Proyecto.</li>
+              <li>Plan de Acción Detallado.</li>
+              <li>Capacitación en Herramientas Avanzadas.</li>
+            </ul>
+            <p class="ideal-for">
+              Ideal para: Dueños de negocio que quieren supervisar o ejecutar
+              las tareas por su cuenta.
+            </p>
+          </div>
+
+          <!-- NUEVO SERVICIO AGREGADO -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-video"></i></div>
+            <h3>Filmación y Fotografía Profesional</h3>
+            <p>
+              Capturamos la esencia de tu marca con producciones audiovisuales
+              de alta calidad.
+            </p>
+            <ul>
+              <li>Filmación profesional con equipos de última generación.</li>
+              <li>Sesiones fotográficas corporativas y de producto.</li>
+              <li>Filmación con drones para tomas aéreas impactantes.</li>
+            </ul>
+            <p class="ideal-for">
+              Ideal para: Marcas que buscan contenido visual premium para
+              destacar en el mercado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="container">
+        <h2>Hablemos de tu siguiente gran paso.</h2>
+        <p>
+          Estás a un solo clic de transformar tu marca. ¿Listo para empezar a
+          ver resultados reales en las próximas 48 horas?
+        </p>
+        <a
+          href="https://wa.me/5491112345678?text=Hola,%20me%20interesan%20sus%20servicios%20de%20marketing"
+          class="btn"
+          target="_blank"
+          >Agendar Consulta Gratuita</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img />
+            <div class="logo-text footer-logo-text">
+              <h3>DOBLE A STUDIO</h3>
+              <p>SINCE 2025</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/dosastudio.es/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Doble A Studio. Marketing Digital con Impacto.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/5491112345678?text=Hola,%20me%20interesan%20sus%20servicios%20de%20marketing"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      // Menú móvil
+      document
+        .querySelector(".mobile-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-menu").classList.toggle("active");
+        });
+
+      // Smooth scroll para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          const headerHeight = document.querySelector("header").offsetHeight;
+
+          if (targetElement) {
+            // Desplazamiento ajustado para no esconder el contenido detrás del header
+            window.scrollTo({
+              top: targetElement.offsetTop - headerHeight - 10,
+              behavior: "smooth",
+            });
+          }
+
+          // Cierra el menú móvil después de hacer clic
+          document.querySelector(".nav-menu").classList.remove("active");
+        });
+      });
+
+      // Crear partículas decorativas
+      function createParticles() {
+        const container = document.getElementById("particles-container");
+        const particleCount = 15;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+
+          // Tamaño aleatorio
+          const size = Math.random() * 10 + 5;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+
+          // Posición inicial aleatoria
+          particle.style.left = `${Math.random() * 100}%`;
+
+          // Color con variación
+          const opacity = Math.random() * 0.3 + 0.1;
+          particle.style.backgroundColor = `rgba(255, 51, 102, ${opacity})`;
+
+          // Animación con duración aleatoria
+          const duration = Math.random() * 20 + 10;
+          particle.style.animationDuration = `${duration}s`;
+
+          // Retraso inicial aleatorio
+          particle.style.animationDelay = `${Math.random() * 5}s`;
+
+          container.appendChild(particle);
+        }
+      }
+
+      // Inicializar partículas cuando la página cargue
+      window.addEventListener("load", createParticles);
+    </script>
+  </body>
+</html>
